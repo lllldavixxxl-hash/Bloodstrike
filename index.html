@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Strike Hack Panel</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 20%, #5b0000, transparent 40%),
+    linear-gradient(145deg, #050505, #170606);
+  color: white;
+}
+
+.panel {
+  width: 92%;
+  max-width: 390px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(15, 8, 8, .96);
+  border: 1px solid #ff2020;
+  box-shadow: 0 0 30px rgba(255, 20, 20, .4);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  color: #ff2929;
+  text-shadow: 0 0 15px #ff0000;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin: 7px 0 24px;
+  font-size: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1b0c0c;
+  border: 1px solid #482020;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.switch {
+  width: 48px;
+  height: 25px;
+  border-radius: 20px;
+  background: #333;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 3px;
+  left: 4px;
+  background: #999;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.switch.active {
+  background: #e00000;
+  box-shadow: 0 0 12px #ff0000;
+}
+
+.switch.active::after {
+  left: 25px;
+  background: white;
+}
+
+.play {
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(90deg, #c40000, #ff3030);
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,0,0,.35);
+}
+
+.play:active {
+  transform: scale(.97);
+}
+
+.status {
+  text-align: center;
+  color: #ff7777;
+  font-size: 12px;
+  margin-top: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+  <div class="title">BLOOD STRIKE</div>
+  <div class="subtitle">HACK STYLE • GAMING PANEL</div>
+
+  <div class="item">
+    <span>Modo Performance</span>
+    <div class="switch" onclick="toggle(this)"></div>
+  </div>
+
+  <div class="item">
+    <span>Mira Personalizada</span>
+    <div class="switch" onclick="toggle(this)"></div>
+  </div>
+
+  <div class="item">
+    <span>HUD Gaming</span>
+    <div class="switch" onclick="toggle(this)"></div>
+  </div>
+
+  <div class="item">
+    <span>Modo Treino</span>
+    <div class="switch" onclick="toggle(this)"></div>
+  </div>
+
+  <button class="play" onclick="abrirJogo()">
+    ▶ ABRIR BLOOD STRIKE
+  </button>
+
+  <div class="status" id="status">
+    ● PAINEL ONLINE
+  </div>
+
+</div>
+
+<script>
+function toggle(el) {
+  el.classList.toggle("active");
+}
+
+function abrirJogo() {
+  document.getElementById("status").textContent =
+    "● ABRINDO BLOOD STRIKE...";
+
+  // Tenta abrir o aplicativo Android pelo esquema de URL.
+  window.location.href =
+    "intent://#Intent;scheme=bloodstrike;package=com.netease.newspike;end";
+}
+</script>
+
+</body>
+</html>
